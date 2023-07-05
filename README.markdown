@@ -142,22 +142,22 @@ payload.texture is to take the texture of the struct payload
 The formula in the sample code:
 
 
-
 $$
-dU = kh * kn * (h(u+1/w,v) - h(u,v))
+dU = kh * kn * (h(u+1/w,v) - h(u,v))
 $$
-
 
 $$
 dV = kh * kn * (h(u,v+1/h)-h(u,v))
 $$
 
 
+
 Where $kh * kn$ is the influence factor (constant), which indicates the influence of texture normals on the object, that is, c1c2 in the figure below.
 
 <div align=center>
-    <img src="images\normal mapping.png" width="500"/
+    <img src="images\normal mapping.png" width="500"/>
 </div>
+
 
 
 
@@ -190,8 +190,9 @@ float dV = kh * kn * (payload.texture->getColor(u, v + 1 / h).norm() - payload.t
 ## 6. Rendering the cow with displacement mapping
 
 <div align=center>
-    <img src="images\displacement mapping.png" width="500"/
+    <img src="images\displacement mapping.png" width="500"/>
 </div>
+
 
 
 So, I add the step of moving point:
@@ -205,8 +206,9 @@ point += kn * normal * payload.texture->getColor(u, v).norm();
 I use the bilinear interpolation to make the texture transition smoother.
 
 <div align=center>
-    <img src="images\bilinear interpolation.png" width="500"/
+    <img src="images\bilinear interpolation.png" width="500"/>
 </div>
+
 
 
 In C++, **int** rounding is straightforward by rounding off the decimal part, so int(u * width) and int(v * height) get the point in the bottom left corner.
@@ -253,20 +255,23 @@ v = std::fmin(1, std::fmax(v, 0));
 ### 1. ./Rasterizer output.png normal
 
 <div align=center>
-    <img src="images\result1.png" width="500"/
+    <img src="images\result1.png" width="500"/>
 </div>
+
 
 ### 2. ./Rasterizer output.png phong
 
 <div align=center>
-    <img src="images\result2.png" width="500"/
+    <img src="images\result2.png" width="500"/>
 </div>
+
 
 ### 3. ./Rasterizer output.png texture
 
 <div align=center>
-    <img src="images\texture mapping.png" width="500"/
+    <img src="images\texture mapping.png" width="500"/>
 </div>
+
 
 ### 4. ./Rasterizer output.png bump
 
@@ -277,8 +282,9 @@ v = std::fmin(1, std::fmax(v, 0));
 ### 5. ./Rasterizer output.png displacement
 
 <div align=center>
-    <img src="images\result_displacement.png" width="500"/
+    <img src="images\result_displacement.png" width="500"/>
 </div>
+
 
 ### 6. With bilinear interpolation
 
@@ -293,10 +299,9 @@ v = std::fmin(1, std::fmax(v, 0));
 </td>
 </tr>
 
-
-
 ### 7. Other models
 
 <div align=center>
-    <img src="images\other model.png" width="500"/
+    <img src="images\other model.png" width="500"/>
 </div>
+
