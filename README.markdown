@@ -144,10 +144,13 @@ The formula in the sample code:
 
 
 $$
-dU = kh * kn * (h(u+1/w,v) - h(u,v))\\
-dV = kh * kn * (h(u,v+1/h)-h(u,v))
+dU = kh * kn * (h(u+1/w,v) - h(u,v))
 $$
 
+
+$$
+dV = kh * kn * (h(u,v+1/h)-h(u,v))
+$$
 
 
 Where $kh * kn$ is the influence factor (constant), which indicates the influence of texture normals on the object, that is, c1c2 in the figure below.
@@ -155,6 +158,8 @@ Where $kh * kn$ is the influence factor (constant), which indicates the influenc
 <div align=center>
     <img src="images\normal mapping.png" width="500"/
 </div>
+
+
 
 h(), in the normal(bump) mapping, is the color of the coordinate (u,v) corresponding to the vertex (RGB value)
 
@@ -188,6 +193,7 @@ float dV = kh * kn * (payload.texture->getColor(u, v + 1 / h).norm() - payload.t
     <img src="images\displacement mapping.png" width="500"/
 </div>
 
+
 So, I add the step of moving point:
 
 ```c++
@@ -201,6 +207,7 @@ I use the bilinear interpolation to make the texture transition smoother.
 <div align=center>
     <img src="images\bilinear interpolation.png" width="500"/
 </div>
+
 
 In C++, **int** rounding is straightforward by rounding off the decimal part, so int(u * width) and int(v * height) get the point in the bottom left corner.
 
@@ -284,11 +291,12 @@ v = std::fmin(1, std::fmax(v, 0));
         <td ><center><img src="images/before_bi.png" > </center></td>
         <td ><center><img src="images/after_bi.png"  > </center></td>
 </td>
-    </tr>
+</tr>
+
+
 
 ### 7. Other models
 
 <div align=center>
     <img src="images\other model.png" width="500"/
 </div>
-
