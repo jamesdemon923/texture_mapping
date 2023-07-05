@@ -1,6 +1,3 @@
-//
-// Created by LEI XU on 4/9/19.
-//
 
 #ifndef RASTERIZER_GLOBAL_H
 #define RASTERIZER_GLOBAL_H

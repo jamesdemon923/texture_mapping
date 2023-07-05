@@ -1,6 +1,3 @@
-//
-// Created by goksu on 4/6/19.
-//
 
 #include <algorithm>
 #include "rasterizer.hpp"
