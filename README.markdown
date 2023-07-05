@@ -11,6 +11,11 @@
 * Eigen
 * OpenCV
 
+**Command**:
+
+* cmake ..
+* make
+
 ## 2. Implement the rasterization function
 
 The basic idea is to project the vertices of a triangle into 2D space, and then color the pixels within that triangle appropriately by using the interpolation to calculate various attributes like color, normal vectors, texture coordinates.
