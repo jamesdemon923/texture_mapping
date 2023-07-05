@@ -276,7 +276,7 @@ v = std::fmin(1, std::fmax(v, 0));
 ### 4. ./Rasterizer output.png bump
 
 <div align=center>
-    <img src="images\result_bump.png" width="500"/
+    <img src="images\result_bump.png" width="500"/>
 </div>
 
 ### 5. ./Rasterizer output.png displacement
