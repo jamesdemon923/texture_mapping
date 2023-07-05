@@ -279,6 +279,7 @@ v = std::fmin(1, std::fmax(v, 0));
     <img src="images\result_bump.png" width="500"/>
 </div>
 
+
 ### 5. ./Rasterizer output.png displacement
 
 <div align=center>
@@ -288,16 +289,9 @@ v = std::fmin(1, std::fmax(v, 0));
 
 ### 6. With bilinear interpolation
 
-<table>
-     <tr>
-        <th colspan="1">Before bilinear interpolation:</th>
-         <th colspan="1">After bilinear interpolation:</th>
-    </tr>
-    <tr>
-        <td ><center><img src="images/before_bi.png" > </center></td>
-        <td ><center><img src="images/after_bi.png"  > </center></td>
-</td>
-</tr>
+| Before bilinear interpolation                          | After bilinear interpolation                         |
+| ------------------------------------------------------ | ---------------------------------------------------- |
+| ![Before bilinear interpolation](images/before_bi.png) | ![After bilinear interpolation](images/after_bi.png) |
 
 ### 7. Other models
 
